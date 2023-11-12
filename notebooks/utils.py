@@ -8,6 +8,15 @@ def sample_batch(dataset):
     return batch.numpy()
 
 
+# display nth image from the fashion_mnist data set
+def display_fm(images, n):
+    #dims = (images.shape[1], images.shape[2])
+    dims=(5,5)
+    plt.figure(figsize=dims)
+    plt.imshow(images[n].astype("float32"), cmap="gray_r")
+    plt.show()
+    
+
 def display(
     images, n=10, size=(20, 3), cmap="gray_r", as_type="float32", save_to=None
 ):
